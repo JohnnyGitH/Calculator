@@ -42,6 +42,9 @@ namespace Calculator
             Console.WriteLine("Thank you \n");
 
             Console.WriteLine("Ok, your equation is " + value1 + newOp + value2);
+
+            Console.WriteLine("Hit Enter to continue");
+            Console.ReadLine();
         }
 
         public static string DetermineOperation(string op)
