@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator.Equation
 {
-    public class Equation
+    public class MathObject
     {
         public string op { get; set; }
         public string newOperation { get; set; }
@@ -14,7 +10,7 @@ namespace Calculator.Equation
         public double value2 { get; set; }
 
 
-        public double GetValue1(Equation eq)
+        public double GetValue1(MathObject eq)
         {
             if (eq == null)
             {
@@ -26,7 +22,7 @@ namespace Calculator.Equation
             return value;
         }
 
-        public double GetValue2(Equation eq)
+        public double GetValue2(MathObject eq)
         {
             if (eq == null)
             {
@@ -38,7 +34,7 @@ namespace Calculator.Equation
             return value;
         }
 
-        public string GetOperation(Equation eq)
+        public string GetOperation(MathObject eq)
         {
             if (eq == null)
             {
@@ -50,7 +46,7 @@ namespace Calculator.Equation
             return value;
         }
 
-        public string GetNewOperation(Equation eq)
+        public string GetNewOperation(MathObject eq)
         {
             if (eq == null)
             {
