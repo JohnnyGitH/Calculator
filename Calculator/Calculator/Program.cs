@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Calculator.Equation;
+using System;
 
 namespace Calculator
 {
@@ -11,37 +8,34 @@ namespace Calculator
         static void Main(string[] args)
         {
 
-            GatheringInput();
+            MathObject eq = new MathObject();
 
+            GatheringInput(eq);
 
 
         }
 
-        public static void GatheringInput()
+        public static void GatheringInput(MathObject eq)
         {
-            string op;
-            string newOp;
-            double value1;
-            double value2;
 
             Console.WriteLine("Welcome to my VHS app \n");
             Console.WriteLine("Type A - for Addition \n");
             Console.WriteLine("Type B - for Subtraction \n");
             Console.WriteLine("Type C - for Multiplication \n");
             Console.WriteLine("Type D - for Division \n");
-            op = Console.ReadLine().ToUpper();
+            eq.op = Console.ReadLine().ToUpper();
 
-            newOp = DetermineOperation(op);
+            eq.newOperation = DetermineOperation(eq.op);
 
             Console.WriteLine("Thank you \n");
             Console.WriteLine("Please enter your first value: ");
-            value1 = Convert.ToDouble(Console.ReadLine());
+            eq.value1 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Thank you \n");
             Console.WriteLine("Please enter your second value: ");
-            value2 = Convert.ToDouble(Console.ReadLine());
+            eq.value2 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Thank you \n");
 
-            Console.WriteLine("Ok, your equation is " + value1 + newOp + value2);
+            Console.WriteLine("Ok, your equation is " + eq.value1 + eq.newOperation + eq.value2);
 
             Console.WriteLine("Hit Enter to continue");
             Console.ReadLine();
