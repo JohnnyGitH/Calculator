@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CalculatorLibrary
+namespace ClassLibrary
 {
     public class Calculator
     {
@@ -13,7 +13,7 @@ namespace CalculatorLibrary
             double input1 = value1;
             double input2 = value2;
 
-            if(input1 == null|| input2 == null)
+            if (input1 == null || input2 == null)
             {
                 throw new FormatException();
             }

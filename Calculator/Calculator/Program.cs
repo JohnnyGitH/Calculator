@@ -1,5 +1,6 @@
 ﻿using Calculator.Equation;
 using System;
+using ClassLibrary;
 
 namespace Calculator
 {
@@ -17,6 +18,7 @@ namespace Calculator
 
         public static void GatheringInput(MathObject eq)
         {
+            double answer;
 
             Console.WriteLine("Welcome to my VHS app \n");
             Console.WriteLine("Type A - for Addition \n");
@@ -36,6 +38,10 @@ namespace Calculator
             Console.WriteLine("Thank you \n");
 
             Console.WriteLine("Ok, your equation is " + eq.value1 + eq.newOperation + eq.value2);
+
+            answer = ClassLibrary.Addition(eq.value1, eq.value2);
+
+            Console.WriteLine(" The answer is " + answer);
 
             Console.WriteLine("Hit Enter to continue");
             Console.ReadLine();
